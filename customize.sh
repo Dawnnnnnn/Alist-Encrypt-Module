@@ -2,7 +2,6 @@
 MODDIR=${0%/*}
 ui_print " -------------------------- "
 ui_print " ------ 安装中，请稍等 ------ "
-sleep 1
 ui_print "
 通过开启/禁用附属模块`Alist-Encrypt开关[Switch]`来控制加密组件的开关"
 
@@ -12,7 +11,5 @@ ui_print "
 http://127.0.0.1:5344/index
 
 默认账户 admin 密码 123456"
-sleep 1
-
 ui_print " ----- 安装已完成，请重启 ---- "
 ui_print " -------------------------- "
