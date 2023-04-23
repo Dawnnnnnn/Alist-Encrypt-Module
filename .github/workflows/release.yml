@@ -1,0 +1,38 @@
+name: Build Alist-Encrypt Module
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: chmod srcipt
+      run: |
+        chmod +x build.sh
+    - name: run srcipt
+      run: |
+        bash build.sh
+    - name: Create release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: ${{ github.ref }}
+        draft: false
+        prerelease: false
+    - name: Upload release
+      uses: actions/upload-release-asset@v1
+      env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      with:
+        upload_url: https://uploads.github.com/repos/${{ github.repository }}/releases/${{ steps.create_release.outputs.id }}/assets{?name,label}
+        asset_path: ./Alist-Encrypt.zip
+        asset_name: Alist-Encrypt.zip
+        asset_content_type: application/zip
+        asset_label: ${{ github.ref }}
