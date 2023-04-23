@@ -11,7 +11,8 @@ mv ncc/ dist/
 mv dist/index.js dist/alist_encrypt.js
 cd ../../
 mv alist-encrypt/node-proxy/dist/ .
-ALIST_ENCRYPT_VERSION=$(grep -oP "version = '\K[0-9]+\.[0-9]+\.[0-9]+",alist-encrypt/node-proxy/src/config.js)
+ALIST_ENCRYPT_VERSION=$(cat alist-encrypt/node-proxy/src/config.js | grep -oP "version = '\K[0-9]+\.[0-9]+\.[0-9]+")
+echo $ALIST_ENCRYPT_VERSION
 rm -rf alist-encrypt
 OLD_VERSION=$(grep -oP '^version=\K\S+' module.prop)
 sed -i "s/^version=$OLD_VERSION$/version=v$ALIST_ENCRYPT_VERSION/" module.prop
