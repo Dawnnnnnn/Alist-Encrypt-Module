@@ -4,6 +4,7 @@ sudo apt-get install git,unzip,nodejs -y
 git clone https://github.com/traceless/alist-encrypt
 python3 fix_path.py
 cd alist-encrypt/node-proxy || exit
+export NODE_OPTIONS=--openssl-legacy-provider 
 npm install
 npm run ncc
 mv ncc/ dist/
