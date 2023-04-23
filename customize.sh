@@ -7,9 +7,11 @@ ui_print "
 通过开启/禁用附属模块`Alist-Encrypt开关[Switch]`来控制加密组件的开关"
 
 ui_print "
-请使用浏览器访问 http://127.0.0.1:5344/public/index.html Alist-Encrypt
+请使用浏览器访问 http://127.0.0.1:5344/public/index.html 
+或
+http://127.0.0.1:5344/index
 
-账户 admin 密码 123456"
+默认账户 admin 密码 123456"
 sleep 1
 
 ui_print " ----- 安装已完成，请重启 ---- "
