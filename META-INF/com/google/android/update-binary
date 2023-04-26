@@ -41,10 +41,10 @@ while :; do
     choose="$(getevent -qlc 1 | awk '{ print $3 }')"
     case "${choose}" in 
     KEY_VOLUMEUP)
-        rm -rf /data/local/tmp/Alist-Encrypt-conf
-        mkdir /data/local/tmp/Alist-Encrypt-conf
-        cp -R /data/adb/modules/Alist-Encrypt/dist/conf/* /data/local/tmp/Alist-Encrypt-conf/
-        ui_print "备份配置成功，已备份到/data/local/tmp/Alist-Encrypt-conf/"
+        rm -rf /data/adb/modules/Alist-Encrypt-Switch/conf
+        mkdir /data/adb/modules/Alist-Encrypt-Switch/conf
+        cp -R /data/adb/modules/Alist-Encrypt/dist/conf/* /data/adb/modules/Alist-Encrypt-Switch/conf/
+        ui_print "备份配置成功，已备份到/data/adb/modules/Alist-Encrypt-Switch/conf/"
         ui_print "重启后将自动还原配置~"
         ;;
     KEY_VOLUMEDOWN)
