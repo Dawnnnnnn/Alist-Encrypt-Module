@@ -38,8 +38,9 @@ ln -s $MODDIR/lib/libz.so.1  $MODDIR/lib/libz.so
 ln -s $MODDIR/lib/libz.so.1  $MODDIR/lib/libz.so.1.2.13
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$MODDIR/lib
 
-OLD_CONF=/data/adb/modules/Alist-Encrypt-Switch/conf/config.json
-while [[ ! -f $OLD_CONF ]]; do
+OLD_CONF="/data/adb/modules/Alist-Encrypt-Switch/conf/config.json"
+while [[ -e $OLD_CONF ]]
+do
     cp -R /data/adb/modules/Alist-Encrypt-Switch/conf/* /data/adb/modules/Alist-Encrypt/dist/conf/
     sleep 1
 done
@@ -49,6 +50,7 @@ while true;
 do
 
     PROCESS=$(ps -ef | grep alist_encrypt.js | grep -v grep | wc -l)
+    echo $PROCESS
     MODXINXI="$MODDIR/module.prop"
     if [[ -e /data/adb/modules/Alist-Encrypt-Switch/disable ]]; then
         if [[ $PROCESS != 0 ]]; then
