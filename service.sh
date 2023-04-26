@@ -38,8 +38,12 @@ ln -s $MODDIR/lib/libz.so.1  $MODDIR/lib/libz.so
 ln -s $MODDIR/lib/libz.so.1  $MODDIR/lib/libz.so.1.2.13
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$MODDIR/lib
 
+OLD_CONF=/data/adb/modules/Alist-Encrypt-Switch/conf/config.json
+while [[ ! -f $OLD_CONF ]]; do
+    cp -R /data/adb/modules/Alist-Encrypt-Switch/conf/* /data/adb/modules/Alist-Encrypt/dist/conf/
+    sleep 1
+done
 
-cp -R /data/adb/modules/Alist-Encrypt-Switch/conf/* /data/adb/modules/Alist-Encrypt/dist/conf/
 
 while true;
 do
