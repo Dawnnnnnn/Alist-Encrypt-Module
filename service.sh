@@ -1,6 +1,11 @@
 #!/system/bin/sh
 MODDIR=${0%/*}
 
+OLD_CONF=/data/local/tmp/Alist-Encrypt-conf/config.json
+if [ -e $OLD_CONF ];then
+cp -R /data/local/tmp/Alist-Encrypt-conf/* /data/adb/modules/Alist-Encrypt/dist/conf/
+fi
+
 chmod 777 $MODDIR/bin/node_alist
 
 cd $MODDIR/lib
