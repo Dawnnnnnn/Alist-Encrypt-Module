@@ -29,5 +29,35 @@ mount /data 2>/dev/null
 . /data/adb/magisk/util_functions.sh
 [ $MAGISK_VER_CODE -lt 20400 ] && require_new_magisk
 
+
+OLD_CONF=/data/adb/modules/Alist-Encrypt/dist/conf/config.json
+if [ -e $OLD_CONF ];then
+ui_print "检测到本地已存在一份配置文件，是否备份？
+—————————————————————————————————————
+ - 按音量键＋: 备份
+ - 按音量键－: 不备份
+—————————————————————————————————————"
+while :; do
+    choose="$(getevent -qlc 1 | awk '{ print $3 }')"
+    case "${choose}" in 
+    KEY_VOLUMEUP)
+        rm -rf /data/local/tmp/Alist-Encrypt-conf
+        mkdir /data/local/tmp/Alist-Encrypt-conf
+        cp -R /data/adb/modules/Alist-Encrypt/dist/conf/ /data/local/tmp/Alist-Encrypt-conf/
+        ui_print "备份配置成功，已备份到/data/local/tmp/Alist-Encrypt-conf/"
+        ;;
+    KEY_VOLUMEDOWN)
+        ui_print "未备份"
+        ;;
+    *)
+        sleep 1
+        continue 
+        ;;
+    esac
+    break
+done
+fi
+
+
 install_module
 exit 0
