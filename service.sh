@@ -53,7 +53,6 @@ while true;
 do
 
     PROCESS=$(ps -ef | grep alist_encrypt.js | grep -v grep | wc -l)
-    echo $PROCESS
     MODXINXI="$MODDIR/module.prop"
     if [[ -e /data/adb/modules/Alist-Encrypt-Switch/disable ]]; then
         if [[ $PROCESS != 0 ]]; then
