@@ -3,10 +3,10 @@ MODDIR=${0%/*}
 ui_print " -------------------------- "
 ui_print " ------ 安装中，请稍等 ------ "
 
-OLD_CONF=/data/local/tmp/Alist-Encrypt-conf/conf/config.json
+OLD_CONF=/data/local/tmp/Alist-Encrypt-conf/config.json
 if [ -e $OLD_CONF ];then
 ui_print "检测到本地已存在一份备份配置文件，默认恢复"
-cp -R /data/local/tmp/Alist-Encrypt-conf/conf/ /data/adb/modules/Alist-Encrypt/dist/conf/
+cp -R /data/local/tmp/Alist-Encrypt-conf/ /data/adb/modules/Alist-Encrypt/dist/conf/
 ui_print "备份恢复成功"
 fi
 
