@@ -1,5 +1,4 @@
 sudo apt-get update
-sudo apt-get upgrade
 sudo apt-get install git unzip nodejs -y
 git clone https://github.com/traceless/alist-encrypt
 python3 fix_path.py
