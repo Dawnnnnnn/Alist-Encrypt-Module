@@ -1,7 +1,7 @@
 id=Alist-Encrypt
 name=Alist-Encrypt
-version=v0.2.4
-versionCode=10
+version=v0.2.5
+versionCode=11
 author=Dawnnnnnn
 description=模块未成功运行
 updateJson=https://raw.githubusercontent.com/Dawnnnnnn/Alist-Encrypt-Module/main/update.json

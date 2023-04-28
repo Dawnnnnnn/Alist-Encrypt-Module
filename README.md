@@ -3,6 +3,9 @@
 ## changelog
 
 
+### 0.2.5
+1. 随主项目更新->修复aliyundrive网页访问的问题、新增webdav加密文件夹中，能正常复制和移动、去掉网页请求header[authorization] ,修复天翼云无法播放问题
+
 ### 0.2.4
 1. 随主项目更新->修复rclone copy的bug和群晖列表的冲突、修复rclone copy和sync的bug
 2. 模块更新->支持历史配置备份及自动恢复
