@@ -2,6 +2,12 @@
 
 ## changelog
 
+主项目: https://github.com/traceless/alist-encrypt
+
+### 0.2.7-2
+
+1. 随主项目更新->尝试修复tcp连接过多无法释放的问题
+
 ### 0.2.7-1
 
 1. 随主项目更新->修复阿里云连接异常,后无法观看问题
