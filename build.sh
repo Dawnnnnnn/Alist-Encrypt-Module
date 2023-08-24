@@ -5,8 +5,7 @@ python3 fix_path.py
 cd alist-encrypt/node-proxy || exit
 export NODE_OPTIONS=--openssl-legacy-provider 
 npm install
-npm run ncc
-mv ncc/ dist/
+npm run build
 mv dist/index.js dist/alist_encrypt.js
 cd ../../
 mv alist-encrypt/node-proxy/dist/ .
