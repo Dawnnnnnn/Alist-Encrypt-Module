@@ -4,6 +4,11 @@
 
 主项目: https://github.com/traceless/alist-encrypt
 
+### 0.2.9-2
+
+1. 随主项目更新->
+   1. fix: 修复本地文件解密bug
+
 ### 0.2.9-1
 
 1. 随主项目更新->
