@@ -4,6 +4,12 @@
 
 主项目: https://github.com/traceless/alist-encrypt
 
+### 0.3.0
+
+1. 随主项目更新->
+   1. fix: fold name should not encrypt when delete folder .
+
+
 ### 0.2.9-2
 
 1. 随主项目更新->
