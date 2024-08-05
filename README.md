@@ -4,6 +4,12 @@
 
 主项目: https://github.com/traceless/alist-encrypt
 
+
+### 0.3.0-1
+
+1. 随主项目更新->
+   1. feature: 允许为视频添加封面图
+
 ### 0.3.0
 
 1. 随主项目更新->
